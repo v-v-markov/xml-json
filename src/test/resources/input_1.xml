@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation='schema_task1_1.xsd'>
+    <car>
+        <number>123456</number>
+    </car>
+
+    <car>
+        <number>5448393</number>
+    </car>
+
+    <car>
+        <number>93999399</number>
+    </car>
+</cars>

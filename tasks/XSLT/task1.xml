@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addresses>
+  <address>
+    <name>Pupkin</name>
+    <city>Novosibirsk</city>
+    <street>Demakova</street>
+    <phone type='mobile'>+79139130000</phone>
+    <documents>
+      <document type='driving permit'>123PAS</document>
+    </documents>
+  </address>
+
+  <address>
+    <name>Losev</name>
+    <phone type='home'>+73834913400</phone>
+    <documents>
+      <document type='passport'>1234PAS</document>
+      <document type='driving permit'>1234DP</document>
+    </documents>
+  </address>
+
+  <address>
+    <name>Ivanov</name>
+    <city>Moscow</city>
+    <street>Lenina</street>
+    <phone type='work'>+73834913400</phone>
+    <documents>
+      <document type='passport'>12345PAS</document>
+    </documents>
+  </address>
+
+  <address>
+    <name>Petrov</name>
+    <city>St.Petersburg</city>
+    <street>Demakova</street>
+    <phone type='home'>+73834913400</phone>
+    <documents>
+      <document type='passport'>123456PAS</document>
+      <document type='driving permit'>123456DP</document>
+    </documents>
+  </address>
+
+</addresses>

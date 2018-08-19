@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addresses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation='schema_task1_1.xsd'>
+  <address>
+    <name>Pupkin</name>
+    <city>Novosibirsk</city>
+    <street>Demakova</street>
+    <phone type='mobile'>+79139130000</phone>
+    <documents>
+      <document type='passport'>1231231231</document>
+      <document type='driving permit'>9045798749</document>
+    </documents>
+  </address>
+
+  <address>
+    <name>Losev</name>
+    <city>Piterburg</city>
+    <street>Nevskiy</street>
+    <phone type='home'>+73774913400</phone>
+    <documents>
+      <document type='passport'>3451231231</document>
+      <document type='driving permit'>43568749</document>
+    </documents>
+  </address>
+
+  <address>
+    <name>Ivanov</name>
+    <city>Tashtagol</city>
+    <street>Nogradkaya</street>
+    <phone type='home'>+73837913777</phone>
+    <documents>
+      <document type='passport'>3451231231</document>
+      <document type='driving permit'>43568749</document>
+    </documents>
+  </address>
+</addresses>

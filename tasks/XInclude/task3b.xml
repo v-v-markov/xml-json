@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<address>
+  <name>Losev</name>
+  <phone type='home'>+73834913400</phone>
+  <documents>
+    <document type='passport'>1234PAS</document>
+    <document type='driving permit'>1234DP</document>
+  </documents>
+</address>
+

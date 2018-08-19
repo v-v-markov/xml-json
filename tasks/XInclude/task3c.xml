@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<address>
+  <name>Ivanov</name>
+  <city>Moscow</city>
+  <street>Lenina</street>
+  <phone type='work'>+73834913400</phone>
+  <documents>
+    <document type='passport'>12345PAS</document>
+  </documents>
+</address>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<address>
+  <name>Petrov</name>
+  <city>St.Petersburg</city>
+  <street>Demakova</street>
+  <phone type='home'>+73834913400</phone>
+  <documents>
+    <document type='passport'>123456PAS</document>
+    <document type='driving permit'>123456DP</document>
+  </documents>
+</address>
+
+

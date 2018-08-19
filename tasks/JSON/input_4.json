@@ -1,0 +1,48 @@
+{
+    "addresses": [
+    {
+        "name": "Pupkin",
+        "city": "Novosibirsk",
+        "street": "Demakova",
+        "phones": {
+            "mobile": 89139130000
+        },
+        "documents": {
+            "driving permit": "123DP"
+        }
+    },
+    {
+        "name": "Losev",
+        "phones": {
+            "home": 83834913400
+        },
+        "documents": {
+            "passport": "1234PAS",
+            "driving permit": "1234DP"
+        }
+    },
+    {
+        "name": "Ivanov",
+        "city": "Moscow",
+        "street": "Lenina",
+        "phones": {
+            "work": 83834913400
+        },
+        "documents": {
+            "passport": "12345PAS"
+        }
+    },
+    {
+        "name": "Petrov",
+        "city": "St.Petersburg",
+        "street": "Demakova",
+        "phones": {
+            "home": 83834913400
+        },
+        "documents": {
+            "passport": "123456PAS",
+            "driving permit": "123456DP"
+        }
+    }
+    ]
+}

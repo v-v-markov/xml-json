@@ -1,0 +1,1 @@
+//document[@type='passport']/parent::*/preceding-sibling::*[name() = 'name']/text()

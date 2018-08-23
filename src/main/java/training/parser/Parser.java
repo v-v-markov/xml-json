@@ -1,5 +1,6 @@
 package training.parser;
 
+import training.data.Addresses;
 import training.data.Cars;
 import training.exceptions.ExecutionException;
 
@@ -18,5 +19,5 @@ public interface Parser {
      *          if error while reading file or
      *          file contains inconsistent format, or another parser error
      */
-    Cars parse(final String fileName) throws ExecutionException;
+    Addresses parse(final String fileName) throws ExecutionException;
 }

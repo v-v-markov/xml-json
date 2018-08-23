@@ -1,6 +1,7 @@
 package training.parser.xmlparser;
 
 
+import training.data.Addresses;
 import training.data.Cars;
 import training.exceptions.ExecutionException;
 import training.parser.ValidatingParser;
@@ -37,7 +38,7 @@ public class JAXBParser implements ValidatingParser {
     }
 
     @Override
-    public Cars parse(final String fileName, final boolean validate)
+    public Addresses parse(final String fileName, final boolean validate)
         throws ExecutionException {
 
         try {
@@ -59,7 +60,7 @@ public class JAXBParser implements ValidatingParser {
                 });
             }
 
-            return (Cars) unmarshaller.unmarshal(new File(fileName));
+            return (Addresses) unmarshaller.unmarshal(new File(fileName));
 
         } catch (JAXBException e) {
             LOGGER.error("Error during JAXBParser, JAXException", e);
@@ -71,7 +72,7 @@ public class JAXBParser implements ValidatingParser {
     }
 
     @Override
-    public Cars parse(final String fileName) throws ExecutionException {
+    public Addresses parse(final String fileName) throws ExecutionException {
         return parse(fileName, validation);
     }
 }

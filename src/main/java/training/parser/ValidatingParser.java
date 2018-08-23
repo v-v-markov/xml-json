@@ -1,7 +1,7 @@
 package training.parser;
 
 
-import training.data.Cars;
+import training.data.Addresses;
 import training.exceptions.ExecutionException;
 
 
@@ -20,5 +20,5 @@ public interface ValidatingParser extends Parser {
      *          if error while reading file or
      *          file contains inconsistent format or other parsing exception
      */
-    Cars parse(final String fileName, final boolean validate) throws ExecutionException;
+    Addresses parse(final String fileName, final boolean validate) throws ExecutionException;
 }

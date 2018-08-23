@@ -1,0 +1,13 @@
+{
+    "addresses": {
+        "name": "Ivanov",
+        "city": "Moscow",
+        "street": "Lenina",
+        "phones": {
+            "work": "+73834913400"
+        },
+        "documents": {
+            "passport": "12345PAS"
+        }
+    }
+}

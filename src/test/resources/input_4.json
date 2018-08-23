@@ -5,7 +5,7 @@
         "city": "Novosibirsk",
         "street": "Demakova",
         "phones": {
-            "mobile": "+79139130000"
+            "mobile": 89139130000
         },
         "documents": {
             "driving permit": "123DP"
@@ -14,7 +14,7 @@
     {
         "name": "Losev",
         "phones": {
-            "home": "+73834913400"
+            "home": 83834913400
         },
         "documents": {
             "passport": "1234PAS",
@@ -26,7 +26,7 @@
         "city": "Moscow",
         "street": "Lenina",
         "phones": {
-            "work": "+73834913400"
+            "work": 83834913400
         },
         "documents": {
             "passport": "12345PAS"
@@ -37,7 +37,7 @@
         "city": "St.Petersburg",
         "street": "Demakova",
         "phones": {
-            "home": "+73834913400"
+            "home": 83834913400
         },
         "documents": {
             "passport": "123456PAS",

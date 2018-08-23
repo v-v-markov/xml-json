@@ -1,6 +1,6 @@
 package training.test;
 
-import training.data.Cars;
+import training.data.Addresses;
 import training.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +15,7 @@ public class TestParserBase {
 
     protected void testParser(
         final Parser parser, final String parserName,
-        final String resource, final Cars example
+        final String resource, final Addresses example
     ) throws Exception {
         if (LOGGER.isDebugEnabled()) {
             final StringBuilder builder = new StringBuilder("Test input parameters are not null, parserName: <");
@@ -25,9 +25,8 @@ public class TestParserBase {
         }
 
         final URL url = getClass().getResource(resource);
-        final Cars list = parser.parse(url.getFile());
-        Assert.assertEquals(example.getCars().size(), list.getCars().size());
-        Assert.assertTrue(example.equals(list));
+        final Addresses parsedData = parser.parse(url.getFile());
+        Assert.assertEquals(example, parsedData);
     }
 
 }

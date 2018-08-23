@@ -1,7 +1,7 @@
 package training.launcher;
 
-import training.data.Car;
-import training.data.Cars;
+import training.data.Address;
+import training.data.Addresses;
 import training.exceptions.ExecutionException;
 import org.apache.commons.cli.*;
 import org.apache.commons.lang.ArrayUtils;
@@ -93,8 +93,8 @@ public class ParserLauncher {
             for (final ParserWrapper parser : parsers) {
                 if (cmd.hasOption(parser.getName())) {
                     try {
-                        final Cars cars = parser.getParser().parse(filename);
-                        printOutput(cars);
+                        final Addresses addresses = parser.getParser().parse(filename);
+                        printOutput(addresses);
                     } catch (ExecutionException e) {
                         LOGGER.error("Some error during parsing", e);
                     }
@@ -114,9 +114,7 @@ public class ParserLauncher {
         formatter.printHelp(CMD_LINE_SYNTAX, defaultOptions);
     }
 
-    private void printOutput(final Cars cars) {
-        for (final Car car : cars.getCars()) {
-            System.out.println(car.getNumber());
-        }
+    private void printOutput(final Addresses addresses) {
+        System.out.println(addresses);
     }
 }

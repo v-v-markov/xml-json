@@ -1,29 +1,55 @@
-# XML/JSON Training #
+# XML/JSON Training practice (by vmarkov)
 
 
-## Overview ##
+## Prerequisites
+Before you start, be sure that you've installed:
+-    Java 8+
+-    Maven 3.5+
+
+## Overview
 
 Training description can be found in [this page](https://confluence.noveogroup.com/display/Trainings/XML+JSON+Training).
+Results of the practice are described below.
 
-Here you should provide information about your project: how it works, general design concepts and any other important points. 
+### XML Schema
 
-
-### Design Patterns ###
-
-Please write a list of design patterns which are used in your application.
-
-
-## How to build the project ##
-
-Here you should describe how to build your project. For example, you can specify Maven commands and profiles.
+XML Schema is provided in tasks\XML_Schema\schema_task1_1.xsd. 
+Could be tested online at https://www.freeformatter.com/xml-validator-xsd.html.
 
 
-## How to run and use the project ##
+### XPath
 
-Please write how to start your application and describe how to use it.
-If your application contains a console menu, please describe in details how to work with it. 
+XPath requests are provided in tasks\XPath\mobilePhones.xpath and tasks\XPath\peopleWitPassports.xpath. 
+Could be tested online at https://www.freeformatter.com/xpath-tester.html
 
+### XSLT
 
-## Other information ##
+XPath requests are provided in tasks\XSLT\task1.xslt and tasks\XSLT\task2.xslt. 
+Could be tested (on Windows) by running commands in tasks\XSLT directory: 
+```
+ ..\bin\msxsl.exe task1.xml task1.xslt
+```
+and
+```
+ ..\bin\msxsl.exe task2.xml task2.xslt > task2.html
+```
 
-Here you can write any additional information about your project.  
+### JSON libraries
+
+## How to build the project
+
+```
+ mvn clean package -Ppack -DskipTests=true
+```
+
+## How to run and use the project
+
+Could be launched by running command in target directory: 
+```
+ java -jar xmljson-jar-with-dependencies.jar --jackson-binding -f [path to JSON file]
+```
+
+E.g. (on Windows) by command: 
+```
+ java -jar xmljson-jar-with-dependencies.jar --jackson-binding -f ..\\tasks\\JSON\\input_1.json
+```

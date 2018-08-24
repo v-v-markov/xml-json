@@ -4,16 +4,46 @@ package training.data;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
+import javax.xml.bind.annotation.*;
+
 /**
  * Phones.
  *
  */
 
-
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Phones {
+    public static final String MOBILE = "mobile";
+    public static final String WORK = "work";
+    public static final String HOME = "home";
+
+    @XmlAttribute
+    private String type;
+    @XmlValue
+    private String phone;
+
+    @XmlTransient
     private String work;
+    @XmlTransient
     private String home;
+    @XmlTransient
     private String mobile;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(final String type) {
+        this.type = type;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(final String phone) {
+        this.phone = phone;
+    }
 
     public String getWork() {
         return work;
@@ -42,9 +72,8 @@ public class Phones {
     @Override
     public String toString() {
         return "Phones{" +
-                "work='" + work + '\'' +
-                ", home='" + home + '\'' +
-                ", mobile='" + mobile + '\'' +
+                "type='" + type + '\'' +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 
@@ -57,18 +86,16 @@ public class Phones {
         final Phones phones = (Phones) o;
 
         return new EqualsBuilder()
-                .append(work, phones.work)
-                .append(home, phones.home)
-                .append(mobile, phones.mobile)
+                .append(type, phones.type)
+                .append(phone, phones.phone)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
-                .append(work)
-                .append(home)
-                .append(mobile)
+                .append(type)
+                .append(phone)
                 .toHashCode();
     }
 }

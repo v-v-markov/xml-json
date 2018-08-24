@@ -26,7 +26,7 @@ public class TestParserBase {
 
         final URL url = getClass().getResource(resource);
         final Addresses parsedData = parser.parse(url.getFile());
-        Assert.assertEquals(example, parsedData);
+        Assert.assertEquals(parsedData, example);
     }
 
 }

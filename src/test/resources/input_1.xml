@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation='schema_task1_1.xsd'>
-    <car>
-        <number>123456</number>
-    </car>
+<addresses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:noNamespaceSchemaLocation='schema_task1_1.xsd'>
+  <address>
+    <name>Pupkin</name>
+    <city>Novosibirsk</city>
+    <street>Demakova</street>
+    <phone type='mobile'>+79139130000</phone>
+    <documents>
+      <document type='driving permit'>123DP</document>
+    </documents>
+  </address>
 
-    <car>
-        <number>5448393</number>
-    </car>
+  <address>
+    <name>Losev</name>
+    <phone type='home'>+73834913400</phone>
+    <documents>
+      <document type='passport'>1234PAS</document>
+      <document type='driving permit'>1234DP</document>
+    </documents>
+  </address>
 
-    <car>
-        <number>93999399</number>
-    </car>
-</cars>
+  <address>
+    <name>Ivanov</name>
+    <city>Moscow</city>
+    <street>Lenina</street>
+    <phone type='work'>+73834913400</phone>
+    <documents>
+      <document type='passport'>12345PAS</document>
+     </documents>
+  </address>
+
+  <address>
+    <name>Petrov</name>
+    <city>St.Petersburg</city>
+    <street>Demakova</street>
+    <phone type='home'>+73834913400</phone>
+    <documents>
+      <document type='passport'>123456PAS</document>
+      <document type='driving permit'>123456PAS</document>
+    </documents>
+  </address>
+
+</addresses>

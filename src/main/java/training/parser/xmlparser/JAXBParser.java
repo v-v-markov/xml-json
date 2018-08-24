@@ -2,7 +2,6 @@ package training.parser.xmlparser;
 
 
 import training.data.Addresses;
-import training.data.Cars;
 import training.exceptions.ExecutionException;
 import training.parser.ValidatingParser;
 
@@ -42,7 +41,7 @@ public class JAXBParser implements ValidatingParser {
         throws ExecutionException {
 
         try {
-            final JAXBContext context = JAXBContext.newInstance(Cars.class);
+            final JAXBContext context = JAXBContext.newInstance(Addresses.class);
 
             final Unmarshaller unmarshaller = context.createUnmarshaller();
 

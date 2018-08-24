@@ -1,27 +1,73 @@
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
-  <xsd:annotation>
-    <xsd:documentation xml:lang="en">Task1 xml schema</xsd:documentation>
-  </xsd:annotation>
-
-  <xsd:element name="cars" type="Cars" />
-
-  <xsd:complexType name="Cars">
-    <xsd:sequence>
-      <xsd:element name="cars" type="Car" minOccurs="0" maxOccurs="unbounded" />
-    </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name="Car">
-    <xsd:sequence>
-      <xsd:element name="number" type="CarNumber" default="Unknown" />
-    </xsd:sequence>
-  </xsd:complexType>
-
-    <xsd:simpleType name="CarNumber">
-        <xsd:restriction base="xsd:string">
-            <xsd:pattern value="([0-9])*"/>
-        </xsd:restriction>
-    </xsd:simpleType>
-</xsd:schema>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="addresses" type="addressesType"/>
+  <xs:complexType name="addressesType">
+    <xs:sequence>
+      <xs:element type="addressType" name="address" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="phonePattern">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[+][0-9]{11}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="phoneType">
+    <xs:simpleContent>
+      <xs:extension base="phonePattern">
+        <xs:attribute name="type" use="optional">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="work"/>
+              <xs:enumeration value="mobile"/>
+              <xs:enumeration value="home"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="documentType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="type" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="passport"/>
+              <xs:enumeration value="driving permit"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element name="name" minOccurs="1" maxOccurs="1" default="Noname">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-zA-Z0-9]+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="city" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="street" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="phoneType" name="phone" minOccurs="0"/>
+      <xs:element type="documentsType" name="documents"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="documentsType">
+    <xs:sequence>
+      <xs:element type="documentType" name="document" maxOccurs="2" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

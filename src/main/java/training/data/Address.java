@@ -4,20 +4,42 @@ package training.data;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
+import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Address.
  *
  */
 
 
+@XmlRootElement(name = "address")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Address {
+    @XmlElement(required = true, defaultValue = "Unknown")
     private String name;
+    @XmlElement
     private String city;
+    @XmlElement
     private String street;
 
+    @XmlElement(name = "phone", required = true)
     private Phones phones;
 
+    @XmlElement(name = "documents", required = true)
+    private DocumentsType documentList;
+
+    @XmlTransient
     private Documents documents;
+
+    public DocumentsType getDocumentList() {
+        return documentList;
+    }
+
+    public void setDocumentList(final DocumentsType documentList) {
+        this.documentList = documentList;
+    }
 
     public String getName() {
         return name;
@@ -66,7 +88,7 @@ public class Address {
                 ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
                 ", phones=" + phones +
-                ", documents=" + documents +
+                ", documents=" + documentList +
                 '}';
     }
 

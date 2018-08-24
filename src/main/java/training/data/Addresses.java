@@ -3,6 +3,10 @@ package training.data;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +17,10 @@ import java.util.List;
  */
 
 
+@XmlRootElement(name = "addresses")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Addresses {
+    @XmlElement(name = "address")
     private List<Address> addresses = new ArrayList<>();
 
     private String error;

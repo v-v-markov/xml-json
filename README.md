@@ -11,6 +11,14 @@ Before you start, be sure that you've installed:
 Training description can be found in [this page](https://confluence.noveogroup.com/display/Trainings/XML+JSON+Training).
 Results of the practice are described below.
 
+## How to build the project
+
+```
+ mvn clean package -Ppack -DskipTests=true
+```
+
+## How to explore tasks results
+
 ### XML Schema
 
 XML Schema is provided in tasks\XML_Schema\schema_task1_1.xsd. 
@@ -34,17 +42,23 @@ and
  ..\bin\msxsl.exe task2.xml task2.xslt > task2.html
 ```
 
-### JSON libraries
+### XML JAXB
 
-## How to build the project
 
+File parsing could be launched by running command in target directory: 
 ```
- mvn clean package -Ppack -DskipTests=true
+ java -jar xmljson-jar-with-dependencies.jar --jaxb -f [path to XML file]
 ```
 
-## How to run and use the project
+E.g. (on Windows) by command: 
+```
+ java -jar xmljson-jar-with-dependencies.jar --jaxb -f ..\\tasks\\XML\\input_1.xml
+```
 
-Could be launched by running command in target directory: 
+### JSON Jackson
+
+
+File parsing could be launched by running command in target directory: 
 ```
  java -jar xmljson-jar-with-dependencies.jar --jackson-binding -f [path to JSON file]
 ```

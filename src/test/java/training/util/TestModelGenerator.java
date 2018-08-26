@@ -80,7 +80,6 @@ public class TestModelGenerator {
      * Get input_2 test data.
      *
      * @return Addresses object with the same data as in corresponding resource file.
-     */
     public static Addresses getTestData2() {
         final Addresses example = new Addresses();
 
@@ -98,6 +97,7 @@ public class TestModelGenerator {
 
         return example;
     }
+     */
 
     /**
      * Get input_3 test data.
@@ -115,10 +115,14 @@ public class TestModelGenerator {
      */
     public static Addresses getTestData4() {
         final Addresses addresses = getTestData1();
-        addresses.getAddresses().get(0).getPhones().setMobile("89139130000");
-        addresses.getAddresses().get(1).getPhones().setHome("83834913400");
-        addresses.getAddresses().get(2).getPhones().setWork("83834913400");
-        addresses.getAddresses().get(3).getPhones().setHome("83834913400");
+        addresses.getAddresses().get(0).getPhones().setPhone("89139130000");
+        addresses.getAddresses().get(0).getPhones().setType(MOBILE);
+        addresses.getAddresses().get(1).getPhones().setPhone("83834913400");
+        addresses.getAddresses().get(1).getPhones().setType(HOME);
+        addresses.getAddresses().get(2).getPhones().setPhone("83834913400");
+        addresses.getAddresses().get(2).getPhones().setType(WORK);
+        addresses.getAddresses().get(3).getPhones().setPhone("83834913400");
+        addresses.getAddresses().get(3).getPhones().setType(HOME);
         return addresses;
     }
 

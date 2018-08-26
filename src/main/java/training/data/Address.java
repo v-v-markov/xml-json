@@ -1,6 +1,7 @@
 package training.data;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
@@ -26,10 +27,8 @@ public class Address {
     private Phones phones;
 
     @XmlElement(name = "documents", required = true)
+    @JsonProperty("documents")
     private DocumentsType documentList;
-
-    @XmlTransient
-    private Documents documents;
 
     public DocumentsType getDocumentList() {
         return documentList;
@@ -71,14 +70,6 @@ public class Address {
         this.phones = phones;
     }
 
-    public Documents getDocuments() {
-        return documents;
-    }
-
-    public void setDocuments(Documents documents) {
-        this.documents = documents;
-    }
-
     @Override
     public String toString() {
         return "Address{" +
@@ -103,7 +94,7 @@ public class Address {
                 .append(city, address.city)
                 .append(street, address.street)
                 .append(phones, address.phones)
-                .append(documents, address.documents)
+                .append(documentList, address.documentList)
                 .isEquals();
     }
 
@@ -114,7 +105,7 @@ public class Address {
                 .append(city)
                 .append(street)
                 .append(phones)
-                .append(documents)
+                .append(documentList)
                 .toHashCode();
     }
 }

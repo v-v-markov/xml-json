@@ -1,8 +1,10 @@
 package training.data;
 
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
+import training.parser.jsonparser.JacksonPhonesBuilder;
 
 import javax.xml.bind.annotation.*;
 
@@ -12,6 +14,7 @@ import javax.xml.bind.annotation.*;
  */
 
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonDeserialize(builder = JacksonPhonesBuilder.class)
 public class Phones {
     public static final String MOBILE = "mobile";
     public static final String WORK = "work";

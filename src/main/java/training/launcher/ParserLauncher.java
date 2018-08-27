@@ -1,6 +1,5 @@
 package training.launcher;
 
-import training.data.Address;
 import training.data.Addresses;
 import training.exceptions.ExecutionException;
 import org.apache.commons.cli.*;

@@ -39,17 +39,21 @@ public class Document {
 
     @Override
     public String toString() {
-        return "Document{" +
-                "type='" + type + '\'' +
-                ", num='" + num + '\'' +
-                '}';
+        return "Document{"
+                + "type='" + type + '\''
+                + ", num='" + num + '\''
+                + '}';
     }
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o) return true;
+        if (this == o) {
+            return true;
+        }
 
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         final Document phones = (Document) o;
 
@@ -61,14 +65,14 @@ public class Document {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
+        return new HashCodeBuilder()
                 .append(type)
                 .append(num)
                 .toHashCode();
     }
 
     public static Document createDocument(final String type, final String num) {
-        Document document = new Document();
+        final Document document = new Document();
         document.type = type;
         document.num = num;
         return document;

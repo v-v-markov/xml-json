@@ -42,7 +42,7 @@ public class Address {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -50,7 +50,7 @@ public class Address {
         return city;
     }
 
-    public void setCity(String city) {
+    public void setCity(final String city) {
         this.city = city;
     }
 
@@ -58,7 +58,7 @@ public class Address {
         return street;
     }
 
-    public void setStreet(String street) {
+    public void setStreet(final String street) {
         this.street = street;
     }
 
@@ -66,26 +66,30 @@ public class Address {
         return phones;
     }
 
-    public void setPhones(Phones phones) {
+    public void setPhones(final Phones phones) {
         this.phones = phones;
     }
 
     @Override
     public String toString() {
-        return "Address{" +
-                "name='" + name + '\'' +
-                ", city='" + city + '\'' +
-                ", street='" + street + '\'' +
-                ", phones=" + phones +
-                ", documents=" + documentList +
-                '}';
+        return "Address{"
+                + "name='" + name + '\''
+                + ", city='" + city + '\''
+                + ", street='" + street + '\''
+                + ", phones=" + phones
+                + ", documents=" + documentList
+                + '}';
     }
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o) return true;
+        if (this == o) {
+            return true;
+        }
 
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         final Address address = (Address) o;
 
@@ -100,7 +104,7 @@ public class Address {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
+        return new HashCodeBuilder()
                 .append(name)
                 .append(city)
                 .append(street)

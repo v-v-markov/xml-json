@@ -52,7 +52,7 @@ public class Phones {
         return work;
     }
 
-    public void setWork(String work) {
+    public void setWork(final String work) {
         this.work = work;
     }
 
@@ -60,7 +60,7 @@ public class Phones {
         return home;
     }
 
-    public void setHome(String home) {
+    public void setHome(final String home) {
         this.home = home;
     }
 
@@ -68,23 +68,27 @@ public class Phones {
         return mobile;
     }
 
-    public void setMobile(String mobile) {
+    public void setMobile(final String mobile) {
         this.mobile = mobile;
     }
 
     @Override
     public String toString() {
-        return "Phones{" +
-                "type='" + type + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
+        return "Phones{"
+                + "type='" + type + '\''
+                + ", phone='" + phone + '\''
+                + '}';
     }
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o) return true;
+        if (this == o) {
+            return true;
+        }
 
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         final Phones phones = (Phones) o;
 
@@ -96,7 +100,7 @@ public class Phones {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
+        return new HashCodeBuilder()
                 .append(type)
                 .append(phone)
                 .toHashCode();

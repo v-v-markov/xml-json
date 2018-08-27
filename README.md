@@ -14,7 +14,7 @@ Results of the practice are described below.
 ## How to build the project
 
 ```
- mvn clean package -Ppack -DskipTests=true
+ mvn clean package -Ppack
 ```
 
 ## How to explore tasks results

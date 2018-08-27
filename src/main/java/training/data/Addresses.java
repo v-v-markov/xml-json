@@ -29,7 +29,7 @@ public class Addresses {
         return addresses;
     }
 
-    public void setAddresses(List<Address> addresses) {
+    public void setAddresses(final List<Address> addresses) {
         this.addresses = addresses;
     }
 
@@ -37,23 +37,27 @@ public class Addresses {
         return error;
     }
 
-    public void setError(String error) {
+    public void setError(final String error) {
         this.error = error;
     }
 
     @Override
     public String toString() {
-        return "Addresses{" +
-                "addresses=" + addresses +
-                ", error='" + error + '\'' +
-                '}';
+        return "Addresses{"
+                + "addresses=" + addresses
+                + ", error='" + error + '\''
+                + '}';
     }
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o) return true;
+        if (this == o) {
+            return true;
+        }
 
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         final Addresses addresses1 = (Addresses) o;
 
@@ -65,7 +69,7 @@ public class Addresses {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
+        return new HashCodeBuilder()
                 .append(addresses)
                 .append(error)
                 .toHashCode();

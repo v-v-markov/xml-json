@@ -21,17 +21,17 @@ public class DocumentsType {
     }
 
     @JsonCreator
-    public DocumentsType(@JsonProperty("passport") String passport,
-                         @JsonProperty("driving permit") String drivingPermit) {
+    public DocumentsType(@JsonProperty("passport") final String passport,
+                         @JsonProperty("driving permit") final String drivingPermit) {
+        Document document = new Document();
         if (StringUtils.isNotEmpty(passport)) {
-            Document document = new Document();
             document.setType(Document.PAS);
             document.setNum(passport);
             getDocument().add(document);
 
         }
         if (StringUtils.isNotEmpty(drivingPermit)) {
-            Document document = new Document();
+            document = new Document();
             document.setType(Document.DP);
             document.setNum(drivingPermit);
             getDocument().add(document);
@@ -48,16 +48,20 @@ public class DocumentsType {
 
     @Override
     public String toString() {
-        return "DocumentsType{" +
-                "document=" + document +
-                '}';
+        return "DocumentsType{"
+                + "document=" + document
+                + '}';
     }
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o) return true;
+        if (this == o) {
+            return true;
+        }
 
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         final DocumentsType that = (DocumentsType) o;
 
@@ -68,7 +72,7 @@ public class DocumentsType {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
+        return new HashCodeBuilder()
                 .append(document)
                 .toHashCode();
     }
